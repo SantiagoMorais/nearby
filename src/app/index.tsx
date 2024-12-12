@@ -6,6 +6,9 @@ import {
     Rubik_600SemiBold,
     Rubik_700Bold
 } from "@expo-google-fonts/rubik"
+import { Loading } from "@/components/loading"
+import { Welcome } from "@/components/welcome";
+import { Steps } from "@/components/steps";
 
 export default function Index () {
     const [fontsLoaded] = useFonts({
@@ -15,10 +18,11 @@ export default function Index () {
         Rubik_700Bold
     })
 
-    if(!fontsLoaded) return;
+    if(!fontsLoaded) return <Loading />;
 
     return(
-    <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-        <Text style={{fontSize: 22}}>Hello React Native</Text>
+    <View style={{flex: 1, padding: 40, gap: 40}}>
+        <Welcome />
+        <Steps />
     </View>
 )}
