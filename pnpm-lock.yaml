@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@expo-google-fonts/rubik':
+        specifier: ^0.2.3
+        version: 0.2.3
       '@expo/vector-icons':
         specifier: ^14.0.2
         version: 14.0.4
@@ -806,6 +809,9 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@expo-google-fonts/rubik@0.2.3':
+    resolution: {integrity: sha512-6qqK3qgBDtjqjfDfgzh7mcduRLp5AuKCkOfafde+VaA+q0S/6levqCLg27st5vNWGGcsRLgT4xWtm2+Fv+agJQ==}
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
@@ -5377,6 +5383,8 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.9
 
   '@bcoe/v8-coverage@0.2.3': {}
+
+  '@expo-google-fonts/rubik@0.2.3': {}
 
   '@expo/bunyan@4.0.1':
     dependencies:
