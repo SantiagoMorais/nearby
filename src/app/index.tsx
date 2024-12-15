@@ -1,14 +1,15 @@
-import { View, Text } from "react-native";
+import { Button } from "@/components/button";
+import { Loading } from "@/components/loading";
+import { Steps } from "@/components/steps";
+import { Welcome } from "@/components/welcome";
 import {
-  useFonts,
   Rubik_400Regular,
   Rubik_500Medium,
   Rubik_600SemiBold,
   Rubik_700Bold,
+  useFonts,
 } from "@expo-google-fonts/rubik";
-import { Loading } from "@/components/loading";
-import { Welcome } from "@/components/welcome";
-import { Steps } from "@/components/steps";
+import { View } from "react-native";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -24,6 +25,9 @@ export default function Index() {
     <View style={{ flex: 1, padding: 40, gap: 40 }}>
       <Welcome />
       <Steps />
+      <Button>
+        <Button.Title>Começar</Button.Title>
+      </Button>
     </View>
   );
 }
