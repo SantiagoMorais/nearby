@@ -17,6 +17,13 @@
 
 ## Functionalities
 
+To run the project, download the zip from the link below, run the server to make your API available to be used in our application.
+
+- [Download the code of the API](https://drive.google.com/drive/folders/1rAX-GQa2na_gMjgnsWQqNpHKwCKQug2_).
+- Install the dependencies using `npm install`.
+- Create the prisma migrations with `npx prisma migrate dev`.
+- Execute the server with `npm run start` or check the scripts into package.json.
+
 ## Author
 
 - GitHub - [Felipe Santiago Morais](https://github.com/SantiagoMorais)

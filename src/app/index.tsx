@@ -9,6 +9,7 @@ import {
   Rubik_700Bold,
   useFonts,
 } from "@expo-google-fonts/rubik";
+import { router } from "expo-router";
 import { View } from "react-native";
 
 export default function Index() {
@@ -25,7 +26,7 @@ export default function Index() {
     <View style={{ flex: 1, padding: 40, gap: 40 }}>
       <Welcome />
       <Steps />
-      <Button isLoading>
+      <Button onPress={() => router.navigate("/home")}>
         <Button.Title>Começar</Button.Title>
       </Button>
     </View>
