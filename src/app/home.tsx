@@ -6,12 +6,16 @@ import { IApiCategoryProps } from "@/core/interfaces/api-category-props";
 
 const Home = () => {
   const [categories, setCategories] = useState<IApiCategoryProps[]>([]);
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const { data } = await api.get("/categories");
+        const { data }: { data: IApiCategoryProps[] } = await api.get(
+          "/categories"
+        );
         setCategories(data);
+        setCategory(data[0].id);
       } catch (error) {
         Alert.alert("Categorias", "Não foi possível carregar as categorias.");
       }
@@ -22,7 +26,11 @@ const Home = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Categories data={categories} />
+      <Categories
+        data={categories}
+        onSelect={setCategory}
+        categorySelected={category}
+      />
     </View>
   );
 };
