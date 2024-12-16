@@ -29,7 +29,6 @@ const Home = () => {
 
       const { data } = await api.get("/markets/category/" + category);
       setMarkets(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
       Alert.alert("Locais", "Não foi possível carregar os locais.");
