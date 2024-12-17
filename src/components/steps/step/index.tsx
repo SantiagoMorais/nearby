@@ -1,7 +1,7 @@
 import { colors } from "@/styles/theme";
 import { Text, View } from "react-native";
 import { s } from "./styles";
-import { IStepProps } from "@/core/interfaces/step-props";
+import { IStepProps } from "@/@core/interfaces/step-props";
 
 export const Step = ({ description, title, icon: Icon }: IStepProps) => (
   <View style={s.container}>

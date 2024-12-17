@@ -1,4 +1,4 @@
-import { IStepProps } from "@/core/interfaces/step-props";
+import { IStepProps } from "@/@core/interfaces/step-props";
 import { IconMapPin, IconQrcode, IconTicket } from "@tabler/icons-react-native";
 
 export const stepsComponent: IStepProps[] = [

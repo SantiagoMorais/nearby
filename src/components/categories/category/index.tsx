@@ -1,4 +1,4 @@
-import { TCategoryProps } from "@/core/types/category-props";
+import { TCategoryProps } from "@/@core/types/category-props";
 import { Pressable, Text } from "react-native";
 import { s } from "./style";
 import { categoriesIcons } from "@/utils/categories-icons";
@@ -13,7 +13,10 @@ export const Category = ({
   const Icon = categoriesIcons[iconId];
 
   return (
-    <Pressable style={[s.container, isSelected && s.containerSelected]} {...rest}>
+    <Pressable
+      style={[s.container, isSelected && s.containerSelected]}
+      {...rest}
+    >
       <Icon size={16} color={colors.gray[isSelected ? 100 : 400]} />
       <Text style={[s.name, isSelected && s.nameSelected]}>{name}</Text>
     </Pressable>

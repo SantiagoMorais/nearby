@@ -1,5 +1,5 @@
-import { TButtonProps } from "@/core/types/button-props";
-import { TIconProps } from "@/core/types/icon-props";
+import { TButtonProps } from "@/@core/types/button-props";
+import { TIconProps } from "@/@core/types/icon-props";
 import { colors } from "@/styles/colors";
 import {
   ActivityIndicator,

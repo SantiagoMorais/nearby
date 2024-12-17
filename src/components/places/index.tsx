@@ -1,4 +1,4 @@
-import { IPlacesProps } from "@/core/interfaces/places-props";
+import { IPlacesProps } from "@/@core/interfaces/places-props";
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import { useRef } from "react";
 import { Text, useWindowDimensions } from "react-native";

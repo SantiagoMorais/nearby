@@ -1,15 +1,18 @@
+import { IApiCategoryProps } from "@/@core/interfaces/api-category-props";
+import { IMarketsProps } from "@/@core/interfaces/markets-props";
 import { Categories } from "@/components/categories";
+import { Map } from "@/components/map";
 import { Places } from "@/components/places";
-import { IApiCategoryProps } from "@/core/interfaces/api-category-props";
-import { IPlaceProps } from "@/core/interfaces/place-props";
 import { api } from "@/services/api";
+import { currentLocation } from "@/utils/objects/current-location";
 import { useEffect, useState } from "react";
-import { Alert, View } from "react-native";
+import { Alert, Text, View } from "react-native";
+import MapView, { Callout, Marker } from "react-native-maps";
 
 const Home = () => {
   const [categories, setCategories] = useState<IApiCategoryProps[]>([]);
   const [category, setCategory] = useState("");
-  const [markets, setMarkets] = useState<IPlaceProps[]>([]);
+  const [markets, setMarkets] = useState<IMarketsProps[]>([]);
 
   const fetchCategories = async () => {
     try {
@@ -50,6 +53,7 @@ const Home = () => {
         onSelect={setCategory}
         categorySelected={category}
       />
+      <Map data={markets} />
       <Places data={markets} />
     </View>
   );

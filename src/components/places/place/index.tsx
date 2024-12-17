@@ -2,7 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { s } from "./style";
 import { IconTicket } from "@tabler/icons-react-native";
 import { colors } from "@/styles/theme";
-import { TPlaceProps } from "@/core/types/place-props";
+import { TPlaceProps } from "@/@core/types/place-props";
 
 export const Place = ({ data, ...rest }: TPlaceProps) => (
   <TouchableOpacity style={s.container} {...rest}>

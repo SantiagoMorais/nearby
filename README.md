@@ -7,11 +7,21 @@
 ## Summary
 
 - [Images](#images);
+- [Dependencies](#dependencies);
+- [DevDependencies](#devdependencies);
 - [Objectives](#objectives);
 - [Functionalities](#functionalities);
 - [Author](#author);
 
 ## Images
+
+## Dependencies
+
+- [react-native-maps](https://docs.expo.dev/versions/latest/sdk/map-view/): A library that provides a Map component that uses Google Maps on Android and Apple Maps or Google Maps on iOS.
+
+
+
+## DevDependencies
 
 ## Objectives
 
