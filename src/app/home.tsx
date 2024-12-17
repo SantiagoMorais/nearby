@@ -3,7 +3,6 @@ import { Places } from "@/components/places";
 import { IApiCategoryProps } from "@/core/interfaces/api-category-props";
 import { IPlaceProps } from "@/core/interfaces/place-props";
 import { api } from "@/services/api";
-import { colors } from "@/styles/colors";
 import { useEffect, useState } from "react";
 import { Alert, View } from "react-native";
 
