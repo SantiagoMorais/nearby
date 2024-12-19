@@ -6,7 +6,7 @@ import { colors } from "@/styles/colors";
 export const Coupon = ({ code }: { code: string }) => (
   <View style={s.container}>
     <Text style={s.title}>Utilize esse cupom</Text>
-    <View>
+    <View style={s.couponContainer}>
       <IconTicket size={24} color={colors.green.light} />
       <Text style={s.code}>{code}</Text>
     </View>

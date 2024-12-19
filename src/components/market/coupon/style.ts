@@ -20,6 +20,11 @@ export const s = StyleSheet.create({
     alignItems: "center",
     gap: 10,
   },
+  couponContainer: {
+    flexDirection: "row",
+    gap: 4,
+    alignItems: "center",
+  },
   code: {
     color: colors.gray[600],
     fontSize: 16,
