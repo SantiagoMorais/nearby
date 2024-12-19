@@ -1,14 +1,14 @@
-import { IMarketsProps } from "@/@core/interfaces/markets-props";
+import { IMarketRouteProps } from "@/@core/interfaces/market-route-props";
 import { Loading } from "@/components/loading";
 import { Cover } from "@/components/market/cover";
 import { api } from "@/services/api";
-import { router, useLocalSearchParams } from "expo-router";
+import { Redirect, router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
-import { Alert, Text, View } from "react-native";
+import { Alert, View } from "react-native";
 
 const Market = () => {
   const params = useLocalSearchParams<{ id: string }>();
-  const [data, setData] = useState<IMarketsProps | null>(null);
+  const [data, setData] = useState<IMarketRouteProps | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchMarket = async () => {
@@ -34,17 +34,13 @@ const Market = () => {
     fetchMarket();
   }, [params.id]);
 
-  return (
-    <View style={{ flex: 1 }}>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        data && (
-          <Cover uri={data.cover}/>
-        )
-      )}
-    </View>
-  );
+  const renderContent = () => {
+    if (isLoading) return <Loading />;
+    if (!data) return <Redirect href="/home" />;
+    if (data) return <Cover uri={data.cover} />;
+  };
+
+  return <View style={{ flex: 1 }}>{renderContent()}</View>;
 };
 
 export default Market;
