@@ -1,4 +1,4 @@
-import { Button } from "@/components/welcomePage/button";
+import { Button } from "@/components/button";
 import { Loading } from "@/components/loading";
 import { Steps } from "@/components/welcomePage/steps";
 import { Welcome } from "@/components/welcomePage/welcome";

@@ -2,6 +2,14 @@ import { StyleSheet } from "react-native";
 import { colors, fontFamily } from "@/styles/theme";
 
 export const s = StyleSheet.create({
-  container: {},
-  header: {},
+  container: {
+    width: "100%",
+    height: 232,
+    marginBottom: -32,
+    backgroundColor: colors.gray[200],
+  },
+  header: {
+    padding: 24,
+    paddingTop: 56,
+  },
 });

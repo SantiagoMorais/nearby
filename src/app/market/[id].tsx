@@ -1,5 +1,6 @@
 import { IMarketsProps } from "@/@core/interfaces/markets-props";
 import { Loading } from "@/components/loading";
+import { Cover } from "@/components/market/cover";
 import { api } from "@/services/api";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
@@ -34,16 +35,12 @@ const Market = () => {
   }, [params.id]);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>{params.id}</Text>
+    <View style={{ flex: 1 }}>
       {isLoading ? (
         <Loading />
       ) : (
         data && (
-          <View>
-            <Text>{data?.name}</Text>
-            <Text>{data?.description}</Text>
-          </View>
+          <Cover uri={data.cover}/>
         )
       )}
     </View>
