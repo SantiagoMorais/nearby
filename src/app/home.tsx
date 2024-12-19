@@ -4,10 +4,8 @@ import { Categories } from "@/components/categories";
 import { Map } from "@/components/map";
 import { Places } from "@/components/places";
 import { api } from "@/services/api";
-import { currentLocation } from "@/utils/objects/current-location";
 import { useEffect, useState } from "react";
-import { Alert, Text, View } from "react-native";
-import MapView, { Callout, Marker } from "react-native-maps";
+import { Alert, View } from "react-native";
 
 const Home = () => {
   const [categories, setCategories] = useState<IApiCategoryProps[]>([]);

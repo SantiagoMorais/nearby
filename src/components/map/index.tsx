@@ -2,8 +2,12 @@ import { IMarketsProps } from "@/@core/interfaces/markets-props";
 import { currentLocation } from "@/utils/objects/current-location";
 import { Text, View } from "react-native";
 import MapView, { Callout, Marker } from "react-native-maps";
-import { fontFamily, colors } from "@/styles/theme";
 import { s } from "./style";
+import { Asset } from "expo-asset";
+import { router } from "expo-router";
+
+const locationImage = Asset.fromModule(require("@/assets/location.png")).uri;
+const pinImage = Asset.fromModule(require("@/assets/pin.png")).uri;
 
 export const Map = ({ data }: { data: IMarketsProps[] }) => (
   <MapView
@@ -21,7 +25,7 @@ export const Map = ({ data }: { data: IMarketsProps[] }) => (
         latitude: currentLocation.latitude,
         longitude: currentLocation.longitude,
       }}
-      image={require("@/assets/location.png")}
+      image={{ uri: locationImage }}
     />
     {data.map((market) => (
       <Marker
@@ -31,9 +35,9 @@ export const Map = ({ data }: { data: IMarketsProps[] }) => (
           latitude: market.latitude,
           longitude: market.longitude,
         }}
-        image={require("@/assets/pin.png")}
+        image={{ uri: pinImage }}
       >
-        <Callout>
+        <Callout onPress={() => router.navigate(`/market/${market.id}`)}>
           <View>
             <Text style={s.name}>{market.name}</Text>
             <Text style={s.address}>{market.address}</Text>

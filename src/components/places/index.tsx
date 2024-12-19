@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Text, useWindowDimensions } from "react-native";
 import { Place } from "./place";
 import { s } from "./style";
+import { router } from "expo-router";
 
 export const Places = ({ data }: IPlacesProps) => {
   const dimensions = useWindowDimensions();
@@ -24,7 +25,12 @@ export const Places = ({ data }: IPlacesProps) => {
       <BottomSheetFlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Place data={item} />}
+        renderItem={({ item }) => (
+          <Place
+            data={item}
+            onPress={() => router.navigate(`/market/${item.id}`)}
+          />
+        )}
         contentContainerStyle={s.content}
         ListHeaderComponent={() => (
           <Text style={s.title}>Explore locais perto de você</Text>
