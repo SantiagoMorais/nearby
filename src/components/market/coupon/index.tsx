@@ -1,0 +1,14 @@
+import { Text, View } from "react-native";
+import { s } from "./style";
+import { IconTicket } from "@tabler/icons-react-native";
+import { colors } from "@/styles/colors";
+
+export const Coupon = ({ code }: { code: string }) => (
+  <View style={s.container}>
+    <Text style={s.title}>Utilize esse cupom</Text>
+    <View>
+      <IconTicket size={24} color={colors.green.light} />
+      <Text style={s.code}>{code}</Text>
+    </View>
+  </View>
+);
