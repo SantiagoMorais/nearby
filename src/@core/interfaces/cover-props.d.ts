@@ -1,3 +1,3 @@
 export interface ICoverProps {
-    uri: string
+  uri: string;
 }

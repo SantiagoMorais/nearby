@@ -14,9 +14,8 @@ const Home = () => {
 
   const fetchCategories = async () => {
     try {
-      const { data }: { data: IApiCategoryProps[] } = await api.get(
-        "/categories"
-      );
+      const { data }: { data: IApiCategoryProps[] } =
+        await api.get("/categories");
       setCategories(data);
       setCategory(data[0].id);
     } catch (error) {

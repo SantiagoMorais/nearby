@@ -2,7 +2,6 @@ import { ICameraProps } from "@/@core/interfaces/camera-props";
 import { Button } from "@/components/button";
 import { api } from "@/services/api";
 import { CameraView } from "expo-camera";
-import { useRef } from "react";
 import { Alert, Modal } from "react-native";
 
 export const Camera = ({
@@ -10,7 +9,7 @@ export const Camera = ({
   setIsCameraVisible,
   setCouponFetching,
   setCoupon,
-  qrLock
+  qrLock,
 }: ICameraProps) => {
   const getCoupon = async (id: string) => {
     try {
