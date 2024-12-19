@@ -1,6 +1,6 @@
 import { IMarketRouteProps } from "@/@core/interfaces/market-route-props";
 import { Loading } from "@/components/loading";
-import { Cover } from "@/components/market/cover";
+import { MarketContent } from "@/components/market";
 import { api } from "@/services/api";
 import { Redirect, router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
@@ -37,10 +37,10 @@ const Market = () => {
   const renderContent = () => {
     if (isLoading) return <Loading />;
     if (!data) return <Redirect href="/home" />;
-    if (data) return <Cover uri={data.cover} />;
+    if (data) return <MarketContent data={data} />;
   };
 
-  return <View style={{ flex: 1 }}>{renderContent()}</View>;
+  return renderContent();
 };
 
 export default Market;
