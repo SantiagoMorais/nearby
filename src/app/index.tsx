@@ -1,7 +1,7 @@
-import { Button } from "@/components/button";
+import { Button } from "@/components/welcomePage/button";
 import { Loading } from "@/components/loading";
-import { Steps } from "@/components/steps";
-import { Welcome } from "@/components/welcome";
+import { Steps } from "@/components/welcomePage/steps";
+import { Welcome } from "@/components/welcomePage/welcome";
 import {
   Rubik_400Regular,
   Rubik_500Medium,

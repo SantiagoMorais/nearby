@@ -1,8 +1,8 @@
 import { IApiCategoryProps } from "@/@core/interfaces/api-category-props";
 import { IMarketsProps } from "@/@core/interfaces/markets-props";
-import { Categories } from "@/components/categories";
-import { Map } from "@/components/map";
-import { Places } from "@/components/places";
+import { Categories } from "@/components/home/categories";
+import { Map } from "@/components/home/map";
+import { Places } from "@/components/home/places";
 import { api } from "@/services/api";
 import { useEffect, useState } from "react";
 import { Alert, View } from "react-native";
