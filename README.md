@@ -8,7 +8,7 @@
 - Expo
 - Axios
 
-<img src="./src/assets/imgs/banner.webp" alt="banner" style="max-width: 300px">
+<img src="./src/assets/screenshots/map.jpg" alt="banner" style="max-width: 300px">
 
 ## Summary
 
